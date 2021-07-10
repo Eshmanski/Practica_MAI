@@ -1,0 +1,23 @@
+
+  <nav class="blue nav-padding">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Sky Surface</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li {{#if isHome}} class='active' {{/if}}><a href="/">Главная</a></li>
+        {{#if isAuth}}
+        <li {{#if isLeads}} class='active' {{/if}}><a href="/leads">Заявки</a></li>
+        <li><a href="/auth/logout">Выйти</a></li>
+        {{else}}
+        <li {{#if isLogin}} class='active' {{/if}}><a href="/auth/login">Вход</a></li>
+        {{/if}}
+        
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li {{#if isHome}} class='active' {{/if}}><a href="/">Главная</a></li>
+    <li {{#if isLeads}} class='active' {{/if}}><a href="/leads">Заявки</a></li>
+    <li {{#if isLogin}} class='active' {{/if}}><a href="/auth/login">Вход</a></li>
+  </ul>

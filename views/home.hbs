@@ -1,0 +1,41 @@
+<h1 class="center">Оставте заявку</h1>
+
+<div class="row">
+    <form class="col s6 offset-s3" action="/leads/add" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" name="firstName" type="text" class="validate" required>
+          <label for="first_name">Имя</label>
+          <span class="helper-text" data-error="Введите имя"></span>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" name="lastName" type="text" class="validate">
+          <label for="last_name">Фамилия</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="tel" name="tel" type="tel" class="validate" required>
+          <label for="tel">Телефон</label>
+          <span class="helper-text" data-error="Введите телефон"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" name="email" type="email" class="validate" required>
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="Введите email"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+            <textarea id="description" name="description" class="materialize-textarea" data-length="120"></textarea>
+            <label for="description">Описание заявки</label>
+        </div>
+      </div>
+
+      <input type="hidden" name="_csrf" value="{{csrf}}">
+      
+      <button type="submit" class="btn btn-prymary">Отправить</button>
+    </form>
+  </div>
